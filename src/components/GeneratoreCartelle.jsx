@@ -145,14 +145,7 @@ const TombolaCard = () => {
               {row.map((cell, colIndex) => (
                 <td
                   key={colIndex}
-                  style={{
-                    border: "1px solid black",
-                    width: "30px",
-                    height: "30px",
-                    textAlign: "center",
-                    backgroundColor: cell ? "white" : "lightgray",
-                    color: cell ? "black" : "transparent"
-                  }}
+                  className={`${cell ? "withNumber" : "noNumber"} cartella`}
                 >
                   {cell || ""}
                 </td>

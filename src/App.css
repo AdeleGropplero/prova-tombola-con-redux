@@ -1,0 +1,58 @@
+body {
+  background: #000000e5;
+}
+
+.cell {
+  margin: 5px;
+  border: solid 1px rgb(183, 0, 255);
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 10px;
+  background-color: rgb(43, 34, 85);
+  color: rgb(255, 255, 255);
+  box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.33);
+  transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+  background-color: rgb(88, 70, 168);
+}
+
+.extracted {
+  background-color: rgb(196, 182, 255);
+  color: rgb(12, 13, 42);
+  border: solid 1px rgb(183, 0, 255);
+  transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+.extractionBtn {
+  background-color: #ff6f61; /* Colore di sfondo principale */
+  color: #fff; /* Colore del testo */
+  border: none; /* Rimuove il bordo */
+  padding: 15px 30px; /* Spaziatura interna */
+  font-size: 18px; /* Dimensione del font */
+  font-weight: bold; /* Grassetto */
+  border-radius: 25px; /* Angoli arrotondati */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2); /* Effetto ombra */
+  cursor: pointer; /* Cambia il puntatore */
+  transition: all 0.3s ease-in-out; /* Transizione fluida */
+}
+
+.extractionBtn:hover {
+  background-color: #ff4436; /* Cambia colore al passaggio del mouse */
+  transform: translateY(-3px); /* Solleva il bottone */
+  box-shadow: 0 6px 8px rgba(255, 255, 255, 0.3); /* Intensifica l'ombra */
+}
+
+.extractionBtn:active {
+  transform: translateY(1px); /* Rende il bottone "premuto" */
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.649); /* Riduce l'ombra */
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 5px;
+  border-radius: 50%;
+}

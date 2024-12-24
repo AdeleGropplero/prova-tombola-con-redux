@@ -1,3 +1,6 @@
+import { useMemo, useState } from "react";
+import { useSelector } from "react-redux";
+
 const generateTombolaCard = () => {
   // Step 1: Genera numeri per ogni colonna con intervalli corretti
   const columns = Array.from({ length: 9 }, (_, colIndex) => {
@@ -125,7 +128,22 @@ e i numeri selezionati per questa colonna sono [15, 21, 25] (quindi num sarà ri
 //--------------------------------------------------------------------------------------------------------------
 
 const TombolaCard = () => {
-  const card = generateTombolaCard();
+  const extracted = useSelector((state) => state.cells.extracted);
+  const [clickedCells, setClickedCells] = useState([]); // Stato per le celle cliccate
+
+  const card = useMemo(() => generateTombolaCard(), []);
+
+  const handleCellClick = (e, cell) => {
+    e.preventDefault();
+    if (!cell) return; // Ignora celle vuote
+
+    if (extracted.includes(cell)) {
+      // Se il numero è estratto, aggiungi il className "tac"
+      setClickedCells((prevClickedCells) => [...prevClickedCells, cell]);
+    } else {
+      alert(`Il numero ${cell} non è stato ancora estratto.`);
+    }
+  };
 
   return (
     <div
@@ -145,9 +163,14 @@ const TombolaCard = () => {
               {row.map((cell, colIndex) => (
                 <td
                   key={colIndex}
-                  className={`${cell ? "withNumber" : "noNumber"} cartella`}
+                  className={`${cell ? "withNumber" : "noNumber"} cartella `}
+                  onClick={(e) => handleCellClick(e, cell)}
                 >
-                  {cell || ""}
+                  <div
+                    className={`${clickedCells.includes(cell) ? "sorted" : ""}`}
+                  >
+                    {cell || ""}
+                  </div>
                 </td>
               ))}
             </tr>

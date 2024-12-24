@@ -18,10 +18,10 @@ const Cells = () => {
   return (
     <>
       <Container>
-        <h1 className="title mt-3">
-          La Tombola di Adi{" "}
+        <h1 className="title mt-3 title">
+          La Tombola di Adi
           <span>
-            <Link to="/generatoreCartelle">
+            <Link to="/generatoreCartelle" className="linkCartelle">
               Genera qui la tua cartella e inizia a giocare!
             </Link>
           </span>

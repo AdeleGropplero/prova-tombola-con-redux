@@ -1,6 +1,7 @@
 body {
   background: #000000e5;
 }
+
 /* TABELLONE */
 .cell {
   margin: 5px;
@@ -57,6 +58,16 @@ body {
   border-radius: 50%;
 }
 
+.title {
+  color: rgb(195, 0, 255);
+}
+
+.linkCartelle {
+  margin-left: 40px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
 /* CARTELLA (nel generatore delle cartelle) */
 
 .cartella {
@@ -67,11 +78,58 @@ body {
 }
 
 .withNumber {
-  background-color: white;
-  color: black;
+  background-color: rgba(156, 9, 75, 0.677);
+  color: rgb(255, 255, 255);
 }
 
+.sorted {
+  background-color: #ff6f61;
+  border-radius: 50%;
+}
+
+/* CSS LA TUA CARTELLA */
+
 .noNumber {
-  background-color: lightgray;
+  background-color: rgba(96, 138, 136, 0.879);
   color: transparent;
+}
+
+.newCartella {
+  margin-top: 50px;
+  background-color: #85054ae6; /* Colore di sfondo principale */
+  color: #fff; /* Colore del testo */
+  border: none; /* Rimuove il bordo */
+  padding: 12px 26px; /* Spaziatura interna */
+  font-size: 18px; /* Dimensione del font */
+  font-weight: bold; /* Grassetto */
+  border-radius: 25px; /* Angoli arrotondati */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.501); /* Effetto ombra */
+  cursor: pointer; /* Cambia il puntatore */
+  transition: all 0.3s ease-in-out; /* Transizione fluida */
+  height: 55px;
+}
+
+.newCartella:hover {
+  background-color: #b72067e6; /* Cambia colore al passaggio del mouse */
+  transform: translateY(-3px); /* Solleva il bottone */
+  box-shadow: 0 6px 8px rgba(255, 255, 255, 0.3); /* Intensifica l'ombra */
+}
+
+.newCartella:active {
+  transform: translateY(1px); /* Rende il bottone "premuto" */
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.649); /* Riduce l'ombra */
+}
+
+.sfondo {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/foto/foto-1.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+
+.estratti {
+  display: block;
+  min-height: 10px;
+  background-color: #794a2a8a;
+  margin-bottom: 20px;
 }

@@ -53,7 +53,7 @@ const ExtractionButton = () => {
       </button>
       <div>
         {extracted.map((num, index) => (
-          <span key={index} className="badge bg-secondary m-1">
+          <span key={index} className="badge  m-1">
             {num}
           </span>
         ))}

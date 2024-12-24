@@ -4,7 +4,6 @@ import ExtractionButton from "./ExtractionButton";
 const Home = () => {
   return (
     <>
-      {" "}
       <Cells /> <ExtractionButton />
     </>
   );

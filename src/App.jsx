@@ -9,7 +9,7 @@ import LaTuaCartella from "./components/LaTuaCartella";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/prova-tombola-con-redux">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/generatoreCartelle" element={<LaTuaCartella />} />
